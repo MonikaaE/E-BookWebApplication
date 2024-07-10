@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E BOOK</title>
+  <link rel="shortcut icon" href="/image/about.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/10.11.0/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/10.11.0/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/10.11.0/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/10.11.0/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/10.11.0/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/10.11.0/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/10.11.0/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/10.11.0/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/10.11.0/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/10.11.0/firebase-performance-compat.js"></script>
+  <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  <style media="screen">
+    body {
+      background: #ECEFF1;
+      color: rgba(0, 0, 0, 0.87);
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #message {
+      background: white;
+      max-width: 360px;
+      margin: 100px auto 16px;
+      padding: 32px 24px;
+      border-radius: 3px;
+    }
+
+    #message h2 {
+      color: #ffa100;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+
+    #message h1 {
+      font-size: 22px;
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.6);
+      margin: 0 0 16px;
+    }
+
+    #message p {
+      line-height: 140%;
+      margin: 16px 0 24px;
+      font-size: 14px;
+    }
+
+    #message a {
+      display: block;
+      text-align: center;
+      background: #039be5;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      padding: 16px;
+      border-radius: 4px;
+    }
+
+    #message,
+    #message a {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    #load {
+      color: rgba(0, 0, 0, 0.4);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+
+      body,
+      #message {
+        margin-top: 0;
+        background: white;
+        box-shadow: none;
+      }
+
+      body {
+        border-top: 16px solid #ffa100;
+      }
+    }
+  </style>
+</head>
+
+
+
+
+<body>
+
+  <section>
+
+    <nav>
+
+      <div class="logo">
+        <img src="image/logo.png">
+      </div>
+
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Books">Books</a></li>
+        <li><a href="#Reviews">Reviews</a></li>
+        <li><a href="#Blog">Blog</a></li>
+      </ul>
+
+      <div class="social_icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-heart"></i>
+      </div>
+
+    </nav>
+
+    <div class="main">
+
+      <div id="Home" class="main_tag">
+        <h1>WELCOME TO<br><span>BOOK STORE</span></h1>
+
+        <p>
+          your one-stop destination for e-books! Whether you're a student seeking study materials or a horror enthusiast
+          craving chilling tales, we've got you covered. Explore our extensive collection of study guides covering a
+          variety of subjects, designed to aid learners of all levels. And for those who dare to delve into the realm of
+          horror, discover spine-tingling stories that will keep you hooked until the last page. Start exploring and
+          unleash your imagination
+        </p>
+        <a href="#" class="main_btn">Learn More</a>
+
+      </div>
+
+      <div class="main_img">
+        <img src="image/table.png">
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+  <!--Services-->
+
+  <div class="services">
+
+    <div class="services_box">
+
+      <div class="services_card">
+        <i class="fa-solid fa-truck-fast"></i>
+        <h3>Fast Delivery</h3>
+
+      </div>
+
+      <div class="services_card">
+        <i class="fa-solid fa-headset"></i>
+        <h3>24 x 7 Services</h3>
+
+      </div>
+
+      <div class="services_card">
+        <i class="fa-solid fa-tag"></i>
+        <h3>Best Deal</h3>
+
+      </div>
+
+      <div class="services_card">
+        <i class="fa-solid fa-lock"></i>
+        <h3>Secure Payment</h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <!--About-->
+
+  <div id="About" class="about">
+
+    <div class="about_image">
+      <img src="image/about.png">
+    </div>
+    <div class="about_tag">
+      <h1>About Us</h1>
+      <p>
+        "Welcome to our EBOOK platform, your ultimate destination for a diverse collection of e-books!
+        Dive into the world of knowledge with our extensive selection of study books,
+        catering to various subjects and academic levels. Whether you're a student, educator, or lifelong learner,
+        find the resources you need to excel. But if you're craving spine-chilling thrills and hair-raising
+        suspense, explore our curated collection of horror books that will keep you on the edge of your seat.
+        From classic tales to contemporary nightmares, indulge your love for the macabre and unearth the secrets lurking
+        in the shadows.
+        Start your reading journey today!"
+      </p>
+      <a href="#" class="about_btn">Learn More</a>
+    </div>
+
+  </div>
+
+
+
+
+  <div id="Books" class="featured_books">
+    <h1>Featured Books</h1>
+    <div class="featured_book_box">
+      <div class="featured_book_card">
+        <div class="featured_book_img">
+          <img src="image/java.jpeg">
+        </div>
+        <div class="featured_book_tag">
+          <h2>JAVA</h2>
+          <p class="writer">herbert schildt</p>
+          <div class="categories">learning book</div><br>
+
+          <a href="https://firebasestorage.googleapis.com/v0/b/e-book-management-system-e5d97.appspot.com/o/Java%20A%20Beginner's%20Guide%2C%206th%20Edition%20(PDF).pdf?alt=media&token=cc4c4a5e-a86a-432e-b4f9-194bf77ee851"
+            class="f_btn">DOWNLOAD</a>
+        </div>
+      </div>
+
+      <div class="featured_book_card">
+        <div class="featured_book_img">
+          <img src="image/book1.png">
+        </div>
+        <div class="featured_book_tag">
+          <h2>PYTHON</h2>
+          <p class="writer">Dave Kuhlman</p>
+          <div class="categories">Learning book</div><br>
+          <a href="https://firebasestorage.googleapis.com/v0/b/e-book-management-system-e5d97.appspot.com/o/python_book_01.pdf?alt=media&token=cd700380-dc60-4583-a75b-e5a932a993b1" class="f_btn">DOWNLOAD</a>
+        </div>
+      </div>
+
+
+
+      <div class="featured_book_card">
+        <div class="featured_book_img">
+          <img src="image/download.jpeg">
+        </div>
+        <div class="featured_book_tag">
+          <h2>C LANGUAGE</h2>
+          <p class="writer"> From stack overflow</p>
+          <div class="categories">Learning book</div><br>
+          <a href="https://firebasestorage.googleapis.com/v0/b/e-book-management-system-e5d97.appspot.com/o/c-language.pdf?alt=media&token=f83ad755-fcb0-4d28-9229-b6a296ea7599" class="f_btn">DOWNLOAD</a>
+        </div>
+      </div>
+
+
+      <div class="featured_book_card">
+        <div class="featured_book_img">
+          <img src="image/download1.png">
+        </div>
+        <div class="featured_book_tag">
+          <h2>C#</h2>
+          <p class="writer">Joseph Albahari</p>
+          <div class="categories">Learning book</div><br>
+
+          <a href="https://firebasestorage.googleapis.com/v0/b/e-book-management-system-e5d97.appspot.com/o/CSharp.10.in.a.Nutshell.Joseph.Albahari.OReilly.9781098121952.EBooksWorld.ir.pdf?alt=media&token=598d7bd5-e470-4753-9b65-780d33a16aa2" class="f_btn">DOWNLOAD</a>
+        </div>
+      </div>
+
+      <div class="featured_book_card">
+        <div class="featured_book_img">
+          <img src="image/download2.jpeg">
+        </div>
+        <div class="featured_book_tag">
+          <h2>WEB TECHNOLOGY</h2>
+          <p class="writer">Pawan Kumar</p>
+          <div class="categories"></div><br>
+          <a href="https://firebasestorage.googleapis.com/v0/b/e-book-management-system-e5d97.appspot.com/o/DECAP472_WEB_TECHNOLOGIES.pdf?alt=media&token=d09e2775-19a4-43ae-8c21-2de0cac3c110" class="f_btn">DOWNLOAD</a>
+        </div>
+      </div>
+
+      <div class="featured_book_card">
+        <div class="featured_book_img">
+          <img src="image/images.jpeg">
+        </div>
+        <div class="featured_book_tag">
+          <h2>DEVOPS</h2>
+          <p class="writer">Anuratha</p>
+          <div class="categories"></div><br>
+          <a href="https://firebasestorage.googleapis.com/v0/b/e-book-management-system-e5d97.appspot.com/o/Devops%20Unit-1%20(1).pdf?alt=media&token=fd31bcf6-1eb5-4e4d-9c81-3200844b3b94" class="f_btn">DOWNLOAD</a>
+        </div>
+      </div>
+
+      
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+  <div id="#Reviews">
+    <h1 id="Reviews">Reviews</h1>
+    <div class="wrapper">
+      <div class="review-card">
+        <div class="header-content">
+          <div class="img-area">
+            <img alt="customer1" src="image/review_1.png">
+          </div>
+          <div class="info">
+            <h4>John Doe</h4>
+            <p>Maketing Manager</p>
+          </div>
+        </div>
+        <div class="single-review">
+          <p>"A treasure trove of knowledge! As a student, I've found an incredible array of study materials on this
+            site that have truly enhanced my learning experience.
+            Plus, the horror section is perfect for those late-night scares. Highly recommended!"</p>
+        </div>
+        <div class="review-footer">
+          <div class="rating">
+            <span class="active">★</span>
+            <span class="active">★</span>
+            <span class="active">★</span>
+            <span class="">★</span>
+            <span class="">★</span>
+          </div>
+          <p>Reviewed on 22/04/2023</p>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="header-content">
+          <div class="img-area">
+            <img alt="customer1" src="image/review_2.png">
+          </div>
+          <div class="info">
+            <h4>Mark Wood</h4>
+            <p>Graphics Expert</p>
+          </div>
+        </div>
+        <div class="single-review">
+          <p>"I stumbled upon this website while searching for study guides, and I'm so glad I did! Not only did I find
+            comprehensive resources for my exams, but I also discovered a passion for horror literature through their
+            amazing selection. It's become my go-to for all things reading!" </p>
+        </div>
+        <div class="review-footer">
+          <div class="rating">
+            <span class="active">★</span>
+            <span class="active">★</span>
+            <span class="">★</span>
+            <span class="">★</span>
+            <span class="">★</span>
+          </div>
+          <p>Reviewed on 29/12/2023</p>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="header-content">
+          <div class="img-area">
+            <img alt="customer1" src="image/review_3.png">
+          </div>
+          <div class="info">
+            <h4>Jason Chedd</h4>
+            <p>Web Designer</p>
+          </div>
+        </div>
+        <div class="single-review">
+          <p>"As an avid horror fan, I'm always on the lookout for new books to sink my teeth into. This website
+            delivers the goods with its diverse range of spine-tingling tales. And the fact that I can also find study
+            materials here is a huge bonus. Two thumbs up!"</p>
+        </div>
+        <div class="review-footer">
+          <div class="rating">
+            <span class="active">★</span>
+            <span class="active">★</span>
+            <span class="active">★</span>
+            <span class="active">★</span>
+            <span class="active">★</span>
+          </div>
+          <p>Reviewed on 15/12/2023</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="banner">
+    <a href="#" class="banner_btn">Learn More</a>
+  </div>
+
+
+
+
+
+
+</body>
+
+</html>
